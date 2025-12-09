@@ -6,16 +6,17 @@ import Actions from "./Actions";
 
 function Tweet({ tweet }) {
   const { user, timestamp, message } = tweet;
+  
   return (
     <div className="tweet">
-      <ProfileImage imageUrl={user.image} />
+      <ProfileImage image={user.image} />
 
       <div className="body">
         <div className="top">
           <User name={user.name} handle={user.handle} />
-          <Timestamp timestamp={timestamp} />
+          <Timestamp time={timestamp} />
         </div>
-        <Message text={message} />
+        <Message message={message} />
         <Actions />
       </div>
 
